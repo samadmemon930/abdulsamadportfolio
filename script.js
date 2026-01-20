@@ -174,16 +174,6 @@ window.addEventListener('scroll', () => {
 });
 
 // --- FIREBASE CONFIG ---
-const firebaseConfig = {
-    apiKey: "AIzaSyCBvzWsTgNyYJ_-q5JnTQmbhx8zdyRJ8DE",
-    authDomain: "portfolio-admin-dashboar-783b0.firebaseapp.com",
-    databaseURL: "https://portfolio-admin-dashboar-783b0-default-rtdb.firebaseio.com/",
-    projectId: "portfolio-admin-dashboar-783b0",
-    storageBucket: "portfolio-admin-dashboar-783b0.appspot.com",
-    messagingSenderId: "655897715980",
-    appId: "1:655897715980:web:b8974002b4f31513ba5529"
-};
-if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig); }
 const database = firebase.database();
 
 let aboutLoaded = false, skillsLoaded = false, projectsLoaded = false;

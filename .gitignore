@@ -1,0 +1,13 @@
+# Secret keys file
+env.js
+
+# Local environment variables
+.env
+.env.local
+
+# Dependency folders
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
