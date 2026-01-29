@@ -160,6 +160,34 @@ html.smooth-scroll {
     display: none;
 }
 
+/* Default: Hamburger icon */
+.menu-icon i::before {
+    content: "\f0c9"; /* fa-bars */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+/* When menu is open: Close (X) icon */
+#menu-toggle:checked + .menu-icon i::before {
+    content: "\f00d"; /* fa-times (close) */
+}
+
+/* Icon base animation */
+.menu-icon i {
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* Hamburger → Close */
+#menu-toggle:checked + .menu-icon i {
+    transform: rotate(180deg) scale(1.1);
+}
+
+/* Optional: thora bounce feel */
+.menu-icon i::before {
+    transition: all 0.35s ease;
+}
+
+
 /* ===== 1. Home Section Fixed ===== */
 .home {
     display: flex;
@@ -365,7 +393,8 @@ html.smooth-scroll {
 
 .project-card {
     text-align: start;
-    width: 350px;
+   width: 100%;
+    max-width: 350px;
     background: var(--secondary-bg-color);
     border-radius: 10px;
     overflow: hidden;
@@ -582,7 +611,7 @@ html.smooth-scroll {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .section {
         padding-inline: 1rem;
         scroll-padding-top: 3rem;
@@ -707,6 +736,9 @@ html.smooth-scroll {
 @media (max-width: 576px) {
     .skills-container-bar {
         padding: 0;
+    }
+    .contact-info h3{
+        font-size: 2.25rem;
     }
 }
 
