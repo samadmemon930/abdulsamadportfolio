@@ -13,7 +13,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-family);
@@ -35,7 +36,8 @@ html.smooth-scroll {
 .section {
     padding: 3rem 7rem;
     scroll-padding-top: 3rem;
-    min-height: 500px; /* Data load hone se pehle jagah rok ke rakhega */
+    min-height: 500px;
+    /* Data load hone se pehle jagah rok ke rakhega */
 }
 
 /* Baki CSS same rahegi... */
@@ -121,19 +123,13 @@ html.smooth-scroll {
     left: 0;
     width: 100%;
     z-index: 1000;
-
     /* 👇 Glass effect */
-    background: rgba(13, 13, 13, 0.55);
+    background: rgba(13, 13, 13, 0.8);
     backdrop-filter: blur(10px) saturate(160%);
     -webkit-backdrop-filter: blur(10px) saturate(160%);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
-
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
-
-
 
 .logo {
     font-size: 2rem;
@@ -169,41 +165,13 @@ html.smooth-scroll {
     display: none;
 }
 
-/* Default: Hamburger icon */
-.menu-icon i::before {
-    content: "\f0c9"; /* fa-bars */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-}
-
-/* When menu is open: Close (X) icon */
-#menu-toggle:checked + .menu-icon i::before {
-    content: "\f00d"; /* fa-times (close) */
-}
-
-/* Icon base animation */
-/* .menu-icon i {
-    transition: transform 0.35s ease, opacity 0.25s ease;
-} */
-
-/* Hamburger → Close */
-/* #menu-toggle:checked + .menu-icon i {
-    transform: rotate(180deg) scale(1.1);
-} */
-
-/* Optional: thora bounce feel */
-/* .menu-icon i::before {
-    transition: all 0.35s ease;
-} */
-
-
 /* ===== 1. Home Section Fixed ===== */
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding:10rem 7rem 0;
+    padding: 10rem 7rem 0;
 }
 
 .home-content .greeting {
@@ -353,7 +321,7 @@ html.smooth-scroll {
     min-width: 300px;
     max-width: 350px;
     background: var(--secondary-bg-color);
-    padding: 48px 2rem;
+    padding: 3rem 2rem;
     border-radius: 15px;
     border: 2px solid transparent;
     transition: all 0.4s ease;
@@ -402,7 +370,7 @@ html.smooth-scroll {
 
 .project-card {
     text-align: start;
-   width: 100%;
+    width: 100%;
     max-width: 350px;
     background: var(--secondary-bg-color);
     border-radius: 10px;
@@ -591,12 +559,15 @@ html.smooth-scroll {
     .section {
         padding: 3rem 4rem;
     }
+
     .navbar {
         padding: 1rem 4rem;
     }
+
     .home {
-        padding-inline: 4rem ;
+        padding-inline: 4rem;
     }
+
     .about-text p {
         font-size: 1.125rem;
     }
@@ -604,17 +575,21 @@ html.smooth-scroll {
 
 @media (max-width:1100px) {
     .section {
-        padding: 3rem ;
+        padding: 3rem;
     }
+
     .navbar {
         padding: 1rem 3rem;
     }
+
     .home {
-        padding-inline: 3rem ;
+        padding-inline: 3rem;
     }
+
     .about-container {
         gap: 4rem;
     }
+
     .about-text p {
         font-size: 1rem;
     }
@@ -625,100 +600,156 @@ html.smooth-scroll {
         padding-inline: 1rem;
         scroll-padding-top: 3rem;
     }
+
     .section-title {
         font-size: 2.25rem;
     }
+
     .section-subtitle {
         font-size: 1.25rem;
     }
+
     .navbar {
         padding: 1rem;
     }
+
     .logo {
         font-size: 1.8rem;
     }
+
     .menu-icon {
         display: block;
-        font-size: 1.8rem;
         cursor: pointer;
         color: var(--text-color);
         z-index: 1001;
+        position: relative;
+        width: 32px;
+        height: 32px;
     }
+
+    .menu-icon i {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.8rem;
+        line-height: 1;
+        transition: opacity 0.2s ease;
+    }
+
+    /* default */
+    .menu-icon .close-icon {
+        opacity: 0;
+    }
+
+    /* checked */
+    #menu-toggle:checked+.menu-icon .open-icon {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.menu-icon .close-icon {
+        opacity: 1;
+    }
+
+
     .nav-links {
         position: fixed;
         top: 78px;
-        right: 0;
-        background-color: var(--secondary-bg-color);
+        left: 0;
         width: 100%;
         flex-direction: column;
-        align-items: center;
-        padding: 40px 0;
-        gap:2rem;
+        padding: 1rem;
+        gap: 1.5rem;
         transform: translateX(100%);
-        transition: transform 0.4s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        background: rgba(13, 13, 13, 1);
+        backdrop-filter: blur(10px) saturate(160%);
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(10px) saturate(160%);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
+
     #menu-toggle:checked~.nav-links {
         transform: translateX(0);
     }
+
     .nav-links li a {
         font-size: 1.3rem;
     }
+
     .home {
         padding: 10rem 1rem 0;
     }
+
     .home-content h1 {
         font-size: 3rem;
     }
+
     .home-content h2 {
         font-size: 2.5rem;
     }
+
     .about-container,
     .contact-container,
     .skills-container {
         flex-direction: column;
         text-align: center;
     }
+
     .about-text {
         order: 1;
     }
+
     .about-text p {
         text-align: center;
         font-size: 1rem;
     }
+
     .about-image {
         order: 2;
     }
+
     .about-image img {
         width: 400px;
     }
+
     .skill-category {
         flex: 1 1 100%;
     }
+
     .skill-info {
         font-size: 1rem;
     }
+
     .service-box {
         padding: 2rem;
     }
+
     .service-box h3 {
         font-size: 1.2rem;
     }
+
     .project-content h1 {
         font-size: 1.25rem;
     }
+
     .secondary-btn {
         margin-left: 0;
         margin-top: 15px;
     }
+
     .home-buttons {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .contact-info {
         order: 2;
     }
+
     .contact-form {
         order: 1;
         width: 100%;
@@ -726,18 +757,22 @@ html.smooth-scroll {
 }
 
 @media (max-width:768px) {
-    .section{
+    .section {
         padding-inline: 1rem;
     }
-    .navbar{
+
+    .navbar {
         padding: 1rem;
     }
-    .home{
+
+    .home {
         padding-inline: 1rem;
     }
+
     .about-image img {
         width: 300px;
     }
+
     .about-text p {
         max-width: 600px;
     }
@@ -747,7 +782,8 @@ html.smooth-scroll {
     .skills-container-bar {
         padding: 0;
     }
-    .contact-info h3{
+
+    .contact-info h3 {
         font-size: 2.25rem;
     }
 }
