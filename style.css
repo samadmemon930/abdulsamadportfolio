@@ -124,10 +124,10 @@ html.smooth-scroll {
     width: 100%;
     z-index: 1000;
     /* 👇 Glass effect */
-    background: rgba(13, 13, 13);
+    background: rgb(20 20 20 / 90%);
     backdrop-filter: blur(10px) saturate(160%);
     -webkit-backdrop-filter: blur(10px) saturate(160%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -237,7 +237,7 @@ html.smooth-scroll {
 }
 
 .about-text h3 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -310,16 +310,14 @@ html.smooth-scroll {
 }
 
 .services-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
 }
 
+
 .service-box {
-    flex: 1 1 300px;
-    min-width: 300px;
-    max-width: 350px;
+    width: 100%;
     background: var(--secondary-bg-color);
     padding: 3rem 2rem;
     border-radius: 15px;
@@ -327,6 +325,7 @@ html.smooth-scroll {
     transition: all 0.4s ease;
     cursor: default;
 }
+
 
 .service-box:hover {
     border-color: var(--neon-color);
@@ -342,7 +341,7 @@ html.smooth-scroll {
 }
 
 .service-box h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     color: var(--text-color);
     font-weight: 600;
@@ -350,7 +349,7 @@ html.smooth-scroll {
 
 .service-box p {
     color: #ccc;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 
@@ -361,17 +360,15 @@ html.smooth-scroll {
 }
 
 .projects-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 35px;
-    font-family: var(--font-family);
 }
+
 
 .project-card {
     text-align: start;
     width: 100%;
-    max-width: 350px;
     background: var(--secondary-bg-color);
     border-radius: 10px;
     overflow: hidden;
@@ -387,16 +384,18 @@ html.smooth-scroll {
 }
 
 .project-card img {
-    width: 100%;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+
 
 .project-content {
     padding: 20px;
 }
 
 .project-content h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--text-color);
     margin-bottom: 5px;
@@ -406,6 +405,7 @@ html.smooth-scroll {
     color: #aaa;
     font-style: italic;
     margin-bottom: 20px;
+    font-size: 1.125rem;
 }
 
 .project-links a {
@@ -504,7 +504,7 @@ html.smooth-scroll {
 .contact-form textarea {
     width: 100%;
     padding: 20px;
-    background-color: #0d0d0d;
+    background: rgb(20 20 20 / 90%);
     border-radius: 20px;
     border: 2px solid #333;
     color: var(--text-color);
@@ -549,31 +549,9 @@ html.smooth-scroll {
 }
 
 /* Media Queries (Same as before) */
-@media (min-width:1301px) and (max-width:1440px) {
-    .about-text h3 {
-        font-size: 2.5rem;
-    }
-}
 
-@media (min-width:1101px) and (max-width:1300px) {
-    .section {
-        padding: 3rem 4rem;
-    }
 
-    .navbar {
-        padding: 1rem 4rem;
-    }
-
-    .home {
-        padding-inline: 4rem;
-    }
-
-    .about-text p {
-        font-size: 1.125rem;
-    }
-}
-
-@media (max-width:1100px) {
+@media (max-width:1200px) {
     .section {
         padding: 3rem;
     }
@@ -595,9 +573,10 @@ html.smooth-scroll {
     }
 }
 
+
 @media (max-width: 991px) {
     .section {
-        padding-inline: 1rem;
+        padding-inline: 2rem;
         scroll-padding-top: 3rem;
     }
 
@@ -610,11 +589,11 @@ html.smooth-scroll {
     }
 
     .navbar {
-        padding: 1rem;
+        padding: 1rem 2rem;
     }
 
     .logo {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .menu-icon {
@@ -633,7 +612,7 @@ html.smooth-scroll {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         line-height: 1;
         transition: opacity 0.2s ease;
     }
@@ -662,11 +641,10 @@ html.smooth-scroll {
         padding: 1rem;
         gap: 1.25rem;
         transform: translateX(100%);
-        background: rgba(13, 13, 13, 1);
+        background: rgb(20 20 20 / 1);
         backdrop-filter: blur(10px) saturate(160%);
-        border-top: 1px solid rgba(255, 255, 255, 0.7);
         -webkit-backdrop-filter: blur(10px) saturate(160%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
         transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
 
@@ -704,6 +682,8 @@ html.smooth-scroll {
     .about-text p {
         text-align: center;
         font-size: 1rem;
+        max-width: 750px;
+        margin-inline: auto;
     }
 
     .about-image {
@@ -727,7 +707,11 @@ html.smooth-scroll {
     }
 
     .service-box h3 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+
+    .service-box p{
+        font-size: 1rem;
     }
 
     .project-content h1 {
@@ -774,6 +758,7 @@ html.smooth-scroll {
 
     .about-text p {
         max-width: 600px;
+        margin-inline: auto;
     }
 }
 
