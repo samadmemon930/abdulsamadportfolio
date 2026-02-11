@@ -644,7 +644,7 @@ html.smooth-scroll {
         background: rgb(20 20 20 / 1);
         backdrop-filter: blur(10px) saturate(160%);
         -webkit-backdrop-filter: blur(10px) saturate(160%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
         transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
 
