@@ -178,18 +178,34 @@ const database = firebase.database();
 
 let aboutLoaded = false, skillsLoaded = false, projectsLoaded = false;
 
+// --- FIREBASE CONFIG (ABOUT SECTION ONLY) ---
 database.ref("about/descriptions").on("value", snapshot => {
     const container = document.getElementById("aboutDescContainer");
-    if(container) {
+    
+    if (container) {
+        // Purana data clear karein pehle
         container.innerHTML = "";
-        (snapshot.val() || []).forEach(text => {
-            const p = document.createElement("p"); p.textContent = text;
-            container.appendChild(p);
+
+        // Firebase snapshot par loop chalayein
+        snapshot.forEach(childSnapshot => {
+            const text = childSnapshot.val(); // Har description ka text uthayein
+            
+            if (text) {
+                const p = document.createElement("p");
+                p.textContent = text;
+                // Fade-in animation (optional) agar aapki CSS mein hai
+                p.className = "fade-in-up"; 
+                container.appendChild(p);
+            }
         });
     }
-    aboutLoaded = true; checkAllLoaded();
-});
 
+    // Flags update karein loading check karne ke liye
+    aboutLoaded = true; 
+    if (typeof checkAllLoaded === "function") {
+        checkAllLoaded();
+    }
+});
 database.ref("skills").on("value", snapshot => {
     const container = document.getElementById("userSkills");
     if(container) {

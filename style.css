@@ -125,10 +125,10 @@ html.smooth-scroll {
     width: 100%;
     z-index: 1000;
     /* 👇 Glass effect */
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(10px) saturate(160%);
     -webkit-backdrop-filter: blur(10px) saturate(160%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -451,8 +451,9 @@ html.smooth-scroll {
 
 .contact-info h3 {
     font-size: 2.5rem;
+    letter-spacing: 1px; /* Thora sa gap spacing se premium lagta hai */
     font-weight: 500;
-    color: var(--neon-color);
+    color: var(--text-color);
     margin-bottom: 15px;
     text-align: start;
 }
@@ -464,9 +465,10 @@ html.smooth-scroll {
     margin-bottom: 30px;
 }
 
+/* Alignment fix for Icon and Text */
 .info-group {
     display: flex;
-    align-items: center;
+    align-items: center; 
     margin-bottom: 24px;
     font-weight: 400;
     font-size: 1rem;
@@ -474,21 +476,34 @@ html.smooth-scroll {
 }
 
 .info-group i {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    text-shadow: none;
+    font-size: 1.4rem; 
+    margin-right: 18px; 
+    color: var(--neon-color);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5); 
+    width: 30px; 
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; 
 }
 
 .info-group span {
     font-weight: 400;
     margin-right: 8px;
     color: #fff;
+    display: inline-block;
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    
 }
 
 .social-icons a {
     font-size: 1.5rem;
     color: #ccc;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     transition: 0.3s;
 }
 
