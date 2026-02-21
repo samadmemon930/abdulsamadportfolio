@@ -1,6 +1,6 @@
 /* ===== Global Reset and Variables ===== */
 :root {
-    --bg-color: #141414 ;
+    --bg-color: #141414;
     --secondary-bg-color: #1a1a1a;
     --text-color: #ffffff;
     --neon-color: #39ff14;
@@ -97,7 +97,6 @@ html.smooth-scroll {
     color: var(--bg-color);
     transform: scale(1.05);
 }
-
 
 .secondary-btn {
     background-color: transparent;
@@ -206,8 +205,10 @@ html.smooth-scroll {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;   /* perfect spacing */
-    flex-wrap: wrap; /* mobile par neeche ajayega */
+    gap: 20px;
+    /* perfect spacing */
+    flex-wrap: wrap;
+    /* mobile par neeche ajayega */
     margin-bottom: 30px;
 }
 
@@ -322,17 +323,15 @@ html.smooth-scroll {
     gap: 40px;
 }
 
-
 .service-box {
     width: 100%;
-    background: var(--secondary-bg-color);
+    background: #1f1f1f;
     padding: 3rem 2rem;
     border-radius: 15px;
     border: 2px solid transparent;
     transition: all 0.4s ease;
     cursor: default;
 }
-
 
 .service-box:hover {
     border-color: var(--neon-color);
@@ -451,7 +450,8 @@ html.smooth-scroll {
 
 .contact-info h3 {
     font-size: 2.5rem;
-    letter-spacing: 1px; /* Thora sa gap spacing se premium lagta hai */
+    letter-spacing: 1px;
+    /* Thora sa gap spacing se premium lagta hai */
     font-weight: 500;
     color: var(--text-color);
     margin-bottom: 15px;
@@ -468,7 +468,7 @@ html.smooth-scroll {
 /* Alignment fix for Icon and Text */
 .info-group {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-bottom: 24px;
     font-weight: 400;
     font-size: 1rem;
@@ -476,14 +476,14 @@ html.smooth-scroll {
 }
 
 .info-group i {
-    font-size: 1.4rem; 
-    margin-right: 18px; 
+    font-size: 1.4rem;
+    margin-right: 18px;
     color: var(--neon-color);
-    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5); 
-    width: 30px; 
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+    width: 30px;
     display: flex;
     align-items: center;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .info-group span {
@@ -493,11 +493,11 @@ html.smooth-scroll {
     display: inline-block;
 }
 
-.social-icons{
+.social-icons {
     display: flex;
     align-items: center;
     gap: 28px;
-    
+
 }
 
 .social-icons a {
@@ -598,7 +598,7 @@ html.smooth-scroll {
 
 @media (max-width: 991px) {
     .section {
-        padding-inline: 2rem;
+        padding-inline: 1rem;
         scroll-padding-top: 3rem;
     }
 
@@ -611,7 +611,7 @@ html.smooth-scroll {
     }
 
     .navbar {
-        padding: 1rem 2rem;
+        padding: 1rem 1rem;
     }
 
     .logo {
@@ -663,10 +663,10 @@ html.smooth-scroll {
         padding: 1rem;
         gap: 1.25rem;
         transform: translateX(100%);
-        background: #141414;
+        background: rgb(20, 20, 20);
         backdrop-filter: blur(10px) saturate(160%);
         -webkit-backdrop-filter: blur(10px) saturate(160%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
         transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
 
@@ -732,7 +732,7 @@ html.smooth-scroll {
         font-size: 1.3rem;
     }
 
-    .service-box p{
+    .service-box p {
         font-size: 1rem;
     }
 
@@ -778,7 +778,7 @@ html.smooth-scroll {
         width: 300px;
     }
 
-    .about-text h3{
+    .about-text h3 {
         font-size: 2.25rem;
     }
 
