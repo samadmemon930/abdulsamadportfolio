@@ -126,7 +126,7 @@ html.smooth-scroll {
     /* 👇 Glass effect */
     background: rgba(15, 15, 15, 0.75);
 backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+border-bottom: 1px solid rgba(255, 255, 255, 0.09);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -377,7 +377,6 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     background: var(--secondary-bg-color);
     border-radius: 10px;
     overflow: hidden;
-    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: 1px solid transparent;
 }
@@ -393,7 +392,6 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     height: auto;
     display: block;
 }
-
 
 .project-content {
     padding: 20px;
@@ -450,7 +448,6 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 .contact-info h3 {
     font-size: 2.5rem;
     letter-spacing: 1px;
-    /* Thora sa gap spacing se premium lagta hai */
     font-weight: 500;
     color: var(--text-color);
     margin-bottom: 15px;
@@ -523,7 +520,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 .contact-form textarea {
     width: 100%;
     padding: 20px;
-    background: rgb(20, 20, 20);
+    background: var(--bg-color);
     border-radius: 20px;
     border: 1px solid #333;
     color: var(--text-color);
@@ -650,7 +647,6 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         opacity: 1;
     }
 
-
     .nav-links {
         position: fixed;
         top: 77px;
@@ -658,12 +654,12 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         width: 100%;
         flex-direction: column;
         padding: 1rem;
-        gap: 1.5rem;
+        gap: 1.75rem;
         transform: translateX(100%);
         background: rgb(15, 15, 15);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
         transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
 
@@ -676,7 +672,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .home {
-        padding: 10rem 2rem 0;
+        padding: 10rem 1rem 0;
     }
 
     .home-content h1 {
