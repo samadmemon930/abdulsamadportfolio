@@ -124,10 +124,9 @@ html.smooth-scroll {
     width: 100%;
     z-index: 1000;
     /* 👇 Glass effect */
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(10px) saturate(160%);
-    -webkit-backdrop-filter: blur(10px) saturate(160%);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.09);
+    background: rgba(15, 15, 15, 0.75);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -378,7 +377,7 @@ html.smooth-scroll {
     background: var(--secondary-bg-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border: 1px solid transparent;
 }
@@ -497,13 +496,11 @@ html.smooth-scroll {
     display: flex;
     align-items: center;
     gap: 28px;
-
 }
 
 .social-icons a {
     font-size: 1.5rem;
     color: #ccc;
-    /* margin: 0 10px; */
     transition: 0.3s;
 }
 
@@ -526,9 +523,9 @@ html.smooth-scroll {
 .contact-form textarea {
     width: 100%;
     padding: 20px;
-    background: rgb(20 20 20 / 90%);
+    background: rgb(20, 20, 20);
     border-radius: 20px;
-    border: 2px solid #333;
+    border: 1px solid #333;
     color: var(--text-color);
     font-family: var(--font-family);
     font-size: 1rem;
@@ -656,17 +653,17 @@ html.smooth-scroll {
 
     .nav-links {
         position: fixed;
-        top: 78px;
+        top: 77px;
         left: 0;
         width: 100%;
         flex-direction: column;
         padding: 1rem;
-        gap: 1.25rem;
+        gap: 1.5rem;
         transform: translateX(100%);
-        background: rgb(20, 20, 20);
-        backdrop-filter: blur(10px) saturate(160%);
-        -webkit-backdrop-filter: blur(10px) saturate(160%);
-        border-bottom: 2px solid rgba(255, 255, 255, 0.09);
+        background: rgb(15, 15, 15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
 
