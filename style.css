@@ -40,7 +40,6 @@ html.smooth-scroll {
     /* Data load hone se pehle jagah rok ke rakhega */
 }
 
-/* Baki CSS same rahegi... */
 .section-title {
     text-align: center;
     font-size: 3rem;
@@ -124,9 +123,10 @@ html.smooth-scroll {
     width: 100%;
     z-index: 1000;
     /* 👇 Glass effect */
-    background: rgba(15, 15, 15, 0.75);
-backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    /* 👈 stronger */
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
@@ -205,13 +205,9 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.09);
     justify-content: center;
     align-items: center;
     gap: 20px;
-    /* perfect spacing */
     flex-wrap: wrap;
-    /* mobile par neeche ajayega */
     margin-bottom: 30px;
 }
-
-
 
 /* ===== 2. About Section ===== */
 .about-container {
@@ -652,15 +648,17 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.09);
         top: 77px;
         left: 0;
         width: 100%;
+        display: flex;
         flex-direction: column;
         padding: 1.5rem 1rem;
         gap: 1.5rem;
         transform: translateX(100%);
         background: rgb(15, 15, 15);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-        transition: background 0.3s ease, backdrop-filter 0.3s ease;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        transition: transform 0.3s ease;
+        z-index: 999;
     }
 
     #menu-toggle:checked~.nav-links {
